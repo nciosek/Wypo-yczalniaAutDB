@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane fx:id="mainPane" prefHeight="450.0" prefWidth="1200.0" style="-fx-background-color: #A8A8A8;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+
+      <TableView fx:id="tabelaAut" layoutX="276.0" layoutY="44.0" prefHeight="323.0" prefWidth="564.0">
+         <columns>
+
+            <TableColumn minWidth="40.0" prefWidth="90.0" resizable="false" text="Imię">
+               <cellValueFactory>
+                  <PropertyValueFactory property="imie" />
+               </cellValueFactory>
+            </TableColumn>
+
+            <TableColumn minWidth="60.0" prefWidth="90.0" resizable="false" text="Nazwisko">
+               <cellValueFactory>
+                  <PropertyValueFactory property="nazwisko" />
+               </cellValueFactory>
+            </TableColumn>
+
+            <TableColumn minWidth="61.0" prefWidth="90.0" resizable="false" text="Marka">
+               <cellValueFactory>
+                  <PropertyValueFactory property="marka" />
+               </cellValueFactory>
+            </TableColumn>
+
+            <TableColumn minWidth="75.0" prefWidth="90.0" resizable="false" text="Model">
+               <cellValueFactory>
+                  <PropertyValueFactory property="model" />
+               </cellValueFactory>
+            </TableColumn>
+
+            <TableColumn minWidth="110.0" prefWidth="112.0" resizable="false" text="Data wypożyczenia">
+               <cellValueFactory>
+                  <PropertyValueFactory property="dataWypozyczenia" />
+               </cellValueFactory>
+            </TableColumn>
+
+            <TableColumn minWidth="63.0" prefWidth="90.0" resizable="false" text="Zaliczka">
+               <cellValueFactory>
+                  <PropertyValueFactory property="zaliczka" />
+               </cellValueFactory>
+            </TableColumn>
+
+         </columns>
+      </TableView>
+
+      <Button fx:id="dodajKlientaButton" layoutX="64.0" layoutY="381.0" mnemonicParsing="false" onMouseClicked="#dodajKlienta" prefHeight="25.0" prefWidth="116.0" text="Dodaj klienta" />
+      <Button fx:id="usunKlientaButton" layoutX="276.0" layoutY="381.0" mnemonicParsing="false" onMouseClicked="#usunKlienta" prefHeight="25.0" prefWidth="116.0" text="Usuń klienta" />
+      <Button fx:id="zamknijButton" layoutX="724.0" layoutY="381.0" mnemonicParsing="false" onMouseClicked="#zamknijProgram" prefHeight="25.0" prefWidth="116.0" text="Zamknij" />
+       <Button fx:id="modyfikujDaneButton" layoutX="955.0" layoutY="381.0" mnemonicParsing="false" onMouseClicked="#modyfikujKlienta" prefHeight="25.0" prefWidth="116.0" text="Modyfikuj" />
+      <Button fx:id="zaktualizuj" layoutX="500.0" layoutY="381.0" mnemonicParsing="false" onMouseClicked="#zaktualizuj" prefHeight="25.0" prefWidth="116.0" text="Zaktualizuj" />
+
+      <Label layoutX="88.0" layoutY="17.0" text="Imię klienta" />
+      <Label layoutX="74.0" layoutY="77.0" text="Nazwisko klienta" />
+      <Label layoutX="30.0" layoutY="137.0" text="Marka wypożyczanego samochodu" />
+      <Label layoutX="68.0" layoutY="197.0" text="Model samochodu" />
+      <Label layoutX="67.0" layoutY="257.0" text="Data wypożyczenia" />
+      <Label layoutX="70.0" layoutY="317.0" text="Wpłacona zaliczka (zł)" />
+
+      <TextField fx:id="imie" layoutX="48.0" layoutY="42.0" prefHeight="15.0" prefWidth="150.0" style="-fx-border-color: #009688;" />
+      <TextField fx:id="nazwisko" layoutX="48.0" layoutY="102.0" prefHeight="15.0" prefWidth="150.0" style="-fx-border-color: #009688;" />
+      <TextField fx:id="marka" layoutX="48.0" layoutY="162.0" prefHeight="15.0" prefWidth="150.0" style="-fx-border-color: #009688;" />
+      <TextField fx:id="model" layoutX="48.0" layoutY="222.0" prefHeight="15.0" prefWidth="150.0" style="-fx-border-color: #009688;" />
+      <TextField fx:id="zaliczka" layoutX="48.0" layoutY="342.0" prefHeight="15.0" prefWidth="150.0" style="-fx-border-color: #009688;" />
+      <TextField fx:id="data" layoutX="48.0" layoutY="285.0" style="-fx-border-color: #009688;" />
+
+      <Label layoutX="982.0" layoutY="22.0" text="Imię klienta" />
+      <Label layoutX="968.0" layoutY="82.0" text="Nazwisko klienta" />
+      <Label layoutX="924.0" layoutY="142.0" text="Marka wypożyczanego samochodu" />
+      <Label layoutX="962.0" layoutY="202.0" text="Model samochodu" />
+      <Label layoutX="961.0" layoutY="262.0" text="Data wypożyczenia" />
+      <Label layoutX="964.0" layoutY="322.0" text="Wpłacona zaliczka (zł)" />
+
+      <TextField fx:id="imie1" layoutX="942.0" layoutY="47.0" prefHeight="15.0" prefWidth="150.0" style="-fx-border-color: #009688;" />
+      <TextField fx:id="nazwisko1" layoutX="942.0" layoutY="107.0" prefHeight="15.0" prefWidth="150.0" style="-fx-border-color: #009688;" />
+      <TextField fx:id="marka1" layoutX="942.0" layoutY="167.0" prefHeight="15.0" prefWidth="150.0" style="-fx-border-color: #009688;" />
+      <TextField fx:id="model1" layoutX="942.0" layoutY="227.0" prefHeight="15.0" prefWidth="150.0" style="-fx-border-color: #009688;" />
+      <TextField fx:id="zaliczka1" layoutX="942.0" layoutY="347.0" prefHeight="15.0" prefWidth="150.0" style="-fx-border-color: #009688;" />
+      <TextField fx:id="data1" layoutX="942.0" layoutY="290.0" style="-fx-border-color: #009688;" />
+      </children>
+   <rotationAxis>
+      <Point3D x="-50.0" z="1.0" />
+   </rotationAxis>
+</Pane>
